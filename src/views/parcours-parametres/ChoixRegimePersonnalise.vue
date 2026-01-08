@@ -1220,7 +1220,7 @@ watch(
       }));
 
       fetchApportsEnergetiques(
-        "https://api.basic.coop/parcel/belgique/apports_energetiques",
+        "https://api-old.basic.coop/parcel/belgique/apports_energetiques",
         coefficientsApportsEnergetiquesApi,
       ).then((apports) => {
         apportsEnergetiques.value = apports;
@@ -1234,7 +1234,7 @@ watch(regimeChoisi, (nouvelleValeur) => {
   console.log("regimeChoisi", nouvelleValeur.id);
   if (nouvelleValeur.id != IDS_REGIMES_ALIMENTAIRES.PERSONNALISE) {
     fetchApportsEnergetiques(
-      "https://api.basic.coop/parcel/belgique/apports_energetiques",
+      "https://api-old.basic.coop/parcel/belgique/apports_energetiques",
       listeCoefficientMultiplicateurVolumeCategorieRegimeChoisi,
     ).then((apports) => {
       apportsEnergetiques.value = apports;
@@ -1242,7 +1242,7 @@ watch(regimeChoisi, (nouvelleValeur) => {
     // TODO: REFACTO ET SIMPLIFICATION
     console.log("fetchCoefficientsGroupesAlimentaires");
     fetchCoefficientsGroupesAlimentaires({
-      url: "https://api.basic.coop/parcel/belgique/coefficients_groupes_alimentaires",
+      url: "https://api-old.basic.coop/parcel/belgique/coefficients_groupes_alimentaires",
       idRegimeAlimentaire: nouvelleValeur.id,
     })
       .then((coefficients) => {
@@ -1471,7 +1471,7 @@ watch(
   listeCoefficientMultiplicateurVolumeCategorieRegimeChoisi,
   (nouveauCoefficientMultiplicateur) => {
     fetchApportsEnergetiques(
-      "https://api.basic.coop/parcel/belgique/apports_energetiques",
+      "https://api-old.basic.coop/parcel/belgique/apports_energetiques",
       nouveauCoefficientMultiplicateur,
     ).then((nouveauxApports) => {
       console.log("APPORTS", nouveauxApports);
