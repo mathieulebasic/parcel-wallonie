@@ -6,7 +6,7 @@ import { IDS_REGIMES_ALIMENTAIRES } from "../config/regimeIds";
 describe("Test du plugin getSurfacesNecessaires", () => {
   it("Test appel API surfaces_necessaires, Régime alimentaire ACTUEL", async () => {
     const response = await fetchSurfaceNecessaire(
-      "https://api.basic.coop/parcel/belgique/surfaces_necessaires",
+      "https://api-old.basic.coop/parcel/belgique/surfaces_necessaires",
       ["mun91114"],
       IDS_REGIMES_ALIMENTAIRES.ACTUEL,
     );
@@ -17,7 +17,7 @@ describe("Test du plugin getSurfacesNecessaires", () => {
   });
   it("Test appel API surfaces_necessaires, Régime alimentaire VEGETARIEN", async () => {
     const response = await fetchSurfaceNecessaire(
-      "https://api.basic.coop/parcel/belgique/surfaces_necessaires",
+      "https://api-old.basic.coop/parcel/belgique/surfaces_necessaires",
       ["mun91114"],
       IDS_REGIMES_ALIMENTAIRES.VEGETARIEN,
     );
@@ -29,7 +29,7 @@ describe("Test du plugin getSurfacesNecessaires", () => {
 
   it("Test appel API surfaces_actuelles", async () => {
     const response = await fetchSurfaceNecessaire(
-      "https://api.basic.coop/parcel/belgique/surfaces_actuels_produit",
+      "https://api-old.basic.coop/parcel/belgique/surfaces_actuels_produit",
       ["mun91114"],
     );
     let sauHaCulturesAnnuellesAlimentationHumaine = response.find(

@@ -20,7 +20,7 @@ import PrimeVue from "primevue/config";
 import "primevue/resources/themes/aura-light-green/theme.css";
 import { MotionPlugin } from "@vueuse/motion";
 
-window.apiURL = "https://api.basic.coop/";
+window.apiURL = "https://api-old.basic.coop/";
 const resizeObserverErrMsg = "ResizeObserver loop limit exceeded";
 
 window.addEventListener("error", (e) => {
